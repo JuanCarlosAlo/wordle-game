@@ -1,30 +1,40 @@
-import { ALL_WORDS } from "./constants.js";
+import { ALL_WORDS } from './constants.js';
 
-const randomWord = ALL_WORDS[Math.floor(Math.random() * ALL_WORDS.length + 1)];
+const randomWord = ALL_WORDS[Math.floor(Math.random() * ALL_WORDS.length)];
 console.log(randomWord);
 let counter = 0;
 
-const compareWord = (word, index) => {
-  if (randomWord.charAt(index) === word.charAt(index)) {
-    return "green";
-  } else if (!randomWord.includes(word[index])) {
-    return "gray";
-  } else if (randomWord.includes(word[index])) {
-    return "yellow";
-  }
+const paintLetter = (letter, position, className, gameBoard) => {
+  const letterBox = gameBoard.children[counter].children[position];
+  letterBox.classList.add(className);
+  letterBox.textContent = letter;
 };
 
 const printWord = (word, gameBoard) => {
+  let wordToCheck = randomWord;
+  let className;
   for (let index = 0; index < word.length; index++) {
-    const letterBox = gameBoard.children[counter].children[index];
-    if (compareWord(word, index) === "yellow") {
-      letterBox.classList.add("yellow");
-    } else if (compareWord(word, index) === "gray") {
-      letterBox.classList.add("gray");
-    } else if (compareWord(word, index) === "green") {
-      letterBox.classList.add("green");
+    if (randomWord.charAt(index) === word.charAt(index)) {
+      className = 'green';
+      wordToCheck = wordToCheck.replace(word[index], '-');
+      paintLetter(word[index], index, className, gameBoard);
     }
-    letterBox.textContent = word[index];
+  }
+
+  console.log(wordToCheck);
+  for (let index = 0; index < wordToCheck.length; index++) {
+    const letterBox = gameBoard.children[counter].children[index];
+    if (wordToCheck.includes(word[index])) {
+      console.log(wordToCheck);
+      className = 'yellow';
+      wordToCheck = wordToCheck.replace(word[index], '-');
+      paintLetter(word[index], index, className, gameBoard);
+    } else if (
+      !letterBox.classList.contains('green') ||
+      !letterBox.classList.contains('yellow')
+    )
+      className = 'gray';
+    paintLetter(word[index], index, className, gameBoard);
   }
   counter++;
 };
