@@ -14,6 +14,7 @@ const createBoard = (gameBoard) => {
       rowContainer.append(letterBox);
     }
   }
+
   gameBoard.append(fragment);
 };
 
