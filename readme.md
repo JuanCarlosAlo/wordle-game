@@ -1,18 +1,18 @@
-# Booking
+# Wordle
 
-![Imagen del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/booking/main/assets/images/readme.png)
+![Imagen del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/wordle-game/main/docs/assets/readme-1.jpg)
 
 ## Ejemplo en vivo
 
-- [Live Demo](https://juancarlosalo.github.io/booking/)
+- [Live Demo](https://juancarlosalo.github.io/wordle-game/)
 
 ## Descripción
 
-Booking es una aplicacion de reserva en funcion de la fecha real, el dia de la semana, el numero de comensales, el turno y la hora
+Wordle es un jugo de adivinar la palabra oculta con un numero limitado de intentos con un numero de letras limitado.
 
 ## ¿Qué he aprendido en este proyecto?
 
-En este proyecto se usa javascript para crear los dias del mes en un bucle dependiendo del mes actual usando el objeto .date(). dependidendo del dia actual se desavilitan los dias anteriores y dependiendo del dia seleccionado se habilitan inputs que dependiendo el valor marcado habilitan los siguientes inputs con informacion distinta determinado por vairables guardadas al hacer click.
+En este proyecto se usa javascript para crear el contenedor de crada letra y crear una palabra aleatoria guardada en las constantes cuando el jugador escribe una palabra de 5 letras la aplicacion recorre la palabra escrita y la compara con la palabra a adivinar con un bucle, si la letra coincida con la palabra secreta se pinta en verde si la letra la contiene pero no esta en la misma posicion se pinta en amarillo y si no la contiene se pinta en gris.
 
 ## Tecnologías
 
@@ -28,15 +28,15 @@ Si quieres echar un vistazo al proyecto, te recomiendo:
 
 ## Ordenador
 
-![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/booking/main/assets/images/readme.png)
+![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/wordle-game/main/docs/assets/readme-1.jpg)
 
 ## Estados activos
 
-![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/booking/main/assets/images/readme2.png)
+![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/wordle-game/main/docs/assets/readme-2.jpg)
 
 ## Parte de Codigo
 
-![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/booking/main/assets/images/readme3.png)
+![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/wordle-game/main/docs/assets/readme-3.jpg)
 
 ## Autor
 
